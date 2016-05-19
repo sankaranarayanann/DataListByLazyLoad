@@ -79,11 +79,15 @@ namespace LazyLoadDataList.Adapter
             var url = rows[position].ImageHref;
             if (!string.IsNullOrEmpty(url))
                 Picasso.With(activity).Load(url).Into(image);
+            else
+                Picasso.With(activity).Load(Resource.Drawable.stub).Into(image);
 
             return view;
         }
 
         #endregion
+
+        #region Private Class
 
         /// <summary>
         /// Private class used while virtualizing the controls
@@ -95,8 +99,9 @@ namespace LazyLoadDataList.Adapter
             public ImageView image;
         }
 
+        #endregion
     }
 
-    
+
 
 }

@@ -11,7 +11,8 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:paddingTop="0dip"
-            android:layout_gravity="top">
+            android:layout_gravity="top"
+            android:minHeight="80dp">
             <TableRow>
                 <TextView
                     android:id="@+id/text"

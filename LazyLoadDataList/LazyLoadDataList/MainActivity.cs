@@ -91,6 +91,9 @@ namespace LazyLoadDataList
                 // Title for the actiity from the Json data
                 this.Title = data.Title;
 
+                if (_listView.Adapter != null)
+                    _listView.Adapter = null;
+
                 // Creation of List Adapter with Json data
                 var adp = new DataListAdapter(this, data.Rows);
                 _listView.Adapter = adp;

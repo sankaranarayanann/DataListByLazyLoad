@@ -44,7 +44,7 @@ namespace LazyLoadDataList.Data.ViewModel.Implementation
         /// <returns></returns>
         public async Task<Facts> GetJsonData()
         {
-            return await ServiceHelper.Instance.DownloadWebClientData<Facts>(AppConstant.WebRequestURL);
+            return await ServiceHelper.Instance.DownloadWebClientData<Facts>(AppConstant.WebRequestURL); ;
         }
 
         #endregion
